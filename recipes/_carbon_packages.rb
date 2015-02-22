@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-include_recipe "build-essential"
+include_recipe "build-essential" if node['graphite']['install_type'] == 'source'
 
 # sadly, have to pin Twisted to known good version
 # install before carbon so it's used
